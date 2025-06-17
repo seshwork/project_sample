@@ -3,14 +3,12 @@ const example = {
   description: "This is an example object",
   version: "1.0.0",
 };
-// Function to display the example object
-function displayExample() {
-  console.log("Name:", example.name);
-  console.log("Description:", example.description);
-  console.log("Version:", example.version);
-}
-// Export the example object and function
+
 module.exports = {
   example,
-  displayExample,
+  displayExample: function () {
+    console.log(`Name: ${this.example.name}`);
+    console.log(`Description: ${this.example.description}`);
+    console.log(`Version: ${this.example.version}`);
+  },
 };
