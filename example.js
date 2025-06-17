@@ -10,3 +10,7 @@ function displayExample() {
   console.log("Version:", example.version);
 }
 // Export the example object and function
+module.exports = {
+  example,
+  displayExample,
+};
